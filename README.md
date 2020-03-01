@@ -25,12 +25,9 @@ Command and/or arguments to pass to `golangci-lint`. Defaults to `run`.
 ```
 
 
-### Run golangci-lint in a sub directory
+### Run `golangci-lint` in a subdirectory
 
 ```yaml
-jobs:
-  golangci-lint:
-    runs-on: ubuntu-latest
     env:
       GOLANGCI_LINT_WORKSPACE: ./path/to/dir
     steps:
