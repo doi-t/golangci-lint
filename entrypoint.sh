@@ -1,5 +1,5 @@
-#!/bin/sh
-set -eu
+#!/bin/bash
+set -e
 
 if [ -z "$GOLANGCI_LINT_WORKSPACE" ];
 then
