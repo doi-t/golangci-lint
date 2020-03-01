@@ -24,6 +24,23 @@ Command and/or arguments to pass to `golangci-lint`. Defaults to `run`.
   uses: actions-contrib/golangci-lint@v1
 ```
 
+
+### Run golangci-lint in a sub directory
+
+```yaml
+jobs:
+  golangci-lint:
+    runs-on: ubuntu-latest
+    env:
+      GOLANGCI_LINT_WORKSPACE: ./path/to/dir
+    steps:
+        uses: actions/checkout@v2
+      - name: Run golangci-lint
+        uses: actions-contrib/golangci-lint@master
+        with:
+          args: "run -v"
+```
+
 ## License
 
 [mit]: https://opensource.org/licenses/MIT
